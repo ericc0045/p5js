@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+
+    <script>
+        function setup() {
+            createCanvas(800, 600);
+            background(200)
+
+            r = (100);
+            g = (150);
+            b = (180);
+
+        }
+
+
+        function draw() {
+            // background(b, r, g);
+
+        }
+
+        function mouseMoved() {
+            background(random(255), random(130), random(100), (10));
+
+            fill(random(255), random(155), random(200));
+            var ellipseSize = random(30, 200);
+            var lineSize = random(255, 230);
+            var rectSize = random(255, 0);
+            ellipse(mouseX, mouseY, ellipseSize, ellipseSize);
+            line(mouseX, mouseY, lineSize, lineSize);
+            rect(mouseX / 2, mouseY / 2, width / 2, height / 3, rectSize, rectSize);
+
+
+
+        }
+
+        function keyPressed() {
+            background(200);
+            fill(random(255), random(155), random(200));
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/ericc0045/p5js/blob/master/interaction-project.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
